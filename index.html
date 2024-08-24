@@ -12,7 +12,7 @@
     <title>MY-PORTFOLIO</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/imgs/favicon.ico">
+    <link rel="shortcut icon" href="assets/imgs/favicon-32x32.png">
 
     <!-- Google Fonts -->
     <link href="../../../css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -384,7 +384,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#0" class="butn butn-md main-colorbg radius-30 mt-40">
+                                    <a href="" id="downloadPdfBtn" class="butn butn-md main-colorbg radius-30 mt-40">
                                         <span class="text-dark">Download CV</span>
                                     </a>
                                 </div>
@@ -951,7 +951,15 @@
     <!-- custom scripts -->
     <script src="assets/js/scripts.js"></script>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      document.getElementById("downloadPdfBtn").addEventListener("click", function () {
+        // Specify the URL of the existing PDF
+        const pdfUrl = "./assets/akshay kathore cv.pdf";        
+        // Open the PDF in a new tab
+        window.open(pdfUrl, "_blank");
+      });
+    </script>
 </body>
 
 </html>
